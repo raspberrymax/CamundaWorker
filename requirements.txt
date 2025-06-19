@@ -1,0 +1,3 @@
+pyzeebe
+requests
+python-dotenv
