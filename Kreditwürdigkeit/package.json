@@ -1,0 +1,36 @@
+{
+  "name": "slowed-down-json-server",
+  "version": "1.0.0",
+  "description": "Slowed down version of a JSON Server to simulate (randomly) slow requests",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "load-test": "curl -f -LI http://localhost:3000/profile && artillery run --output reports/test-run-report.json asciiart-load-test.yml && artillery report reports/test-run-report.json",
+    "prepare": "husky install"
+  },
+  "author": "Luc Weinbrecht (luc.weinbrecht.de)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwluc/slowed-down-json-server.git"
+  },
+  "dependencies": {
+    "command-line-args": "^6.0.1",
+    "express": "^4.21.1",
+    "json-server": "0.17.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "artillery": "^2.0.21",
+    "eslint": "^9.15.0",
+    "globals": "^15.12.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
