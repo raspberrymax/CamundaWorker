@@ -1,7 +1,7 @@
 {
-  "customers": [
-    { "id": 1, "name": "Max", "creditworthy": true },
-    { "id": 2, "name": "Anna", "creditworthy": false },
-    { "id": 3, "name": "Lukas", "creditworthy": true }
+  "riskassessments": [
+    { "id": 1, "name": "Max", "risk": "mittel" },
+    { "id": 2, "name": "Anna", "risk": "hoch" },
+    { "id": 3, "name": "Lukas", "risk": "gering" }
   ]
 }
